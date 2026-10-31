@@ -37,5 +37,6 @@ class Test_Framework_Factory extends TestCase {
 	public function test_get_instance_is_singleton_per_subclass() {
 		$this->assertSame( Factory\Message::get_instance(), Factory\Message::get_instance() );
 		$this->assertSame( Factory\Notification::get_instance(), Factory\Notification::get_instance() );
+		$this->assertSame( Factory\Subscription::get_instance(), Factory\Subscription::get_instance() );
 	}
 }

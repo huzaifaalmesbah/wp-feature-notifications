@@ -39,10 +39,10 @@ abstract class Factory {
 	 * @return static The main instance.
 	 */
 	public static function get_instance() {
-		if ( ! isset( static::$instances[ static::class ] ) ) {
-			static::$instances[ static::class ] = new static();
+		if ( ! isset( self::$instances[ static::class ] ) ) {
+			self::$instances[ static::class ] = new static();
 		}
 
-		return static::$instances[ static::class ];
+		return self::$instances[ static::class ];
 	}
 }
